@@ -5871,21 +5871,7 @@ $(document).ready(function()
         e()
     }
 });
-$(document).ready(function()
-{
-    $("ul.tab_content").hide();
-    $("ul.tab_buttons li:first").addClass("active").show();
-    $("ul.tab_content:first").show();
-    $("ul.tab_buttons li").click(function()
-    {
-        $("ul.tab_buttons li").removeClass("active");
-        $(this).addClass("active");
-        $("ul.tab_content").slideUp(1000);
-        var e = $(this).find("a").attr("data-id");
-        $(e).slideDown(1000);
-        return false
-    })
-});
+
 (function($)
 {
     if($.fn.carouFredSel)
@@ -8996,89 +8982,2392 @@ $(document).ready(function()
     }
 })(jQuery);
 
-$(document).ready(function()
-{
-    $(".PopularPosts img").attr("width", "120px").attr("height", "90px").attr("src", function(e, f)
-    {
-        return f.replace("s72-c", "s120-c")
-    })
-}), $(document).ready(function()
-{
-    $(".post-summary img").attr("width", "100%").attr("height", "100%").attr("src", function(e, f)
-    {
-        return f.replace("s72-c", "s210-c")
-    })
-});
 
+! function(t)
+{
+    var e = {};
 
-
-$(document).ready(function()
-{
-    $(".PopularPosts img").attr("width", "120px").attr("height", "90px").attr("src", function(e, f)
+    function n(r)
     {
-        return f.replace("s120-c", "s1600-rw")
-    })
-}), $(document).ready(function()
-{
-    $(".post img").attr("width", "100%").attr("height", "100%").attr("src", function(e, f)
+        if(e[r]) return e[r].exports;
+        var o = e[r] = {
+            i: r,
+            l: !1,
+            exports:
+            {}
+        };
+        return t[r].call(o.exports, o, o.exports, n), o.l = !0, o.exports
+    }
+    n.m = t, n.c = e, n.d = function(t, e, r)
     {
-        return f.replace("s16000", "s1600-rw")
-    })
-});
-$(document).ready(function()
-{
-    var e = $(".slidernav").offset().top;
-    var f = function()
-    {
-        var g = $(window).scrollTop();
-        if(g > e)
+        n.o(t, e) || Object.defineProperty(t, e,
         {
-            $(".heeader").addClass("sticky")
-        }
-        else
-        {
-            $(".heeader").removeClass("sticky")
-        }
-    };
-    f();
-    $(window).scroll(function()
+            enumerable: !0,
+            get: r
+        })
+    }, n.r = function(t)
     {
-        f()
+        "undefined" !== typeof Symbol && Symbol.toStringTag && Object.defineProperty(t, Symbol.toStringTag,
+        {
+            value: "Module"
+        }), Object.defineProperty(t, "__esModule",
+        {
+            value: !0
+        })
+    }, n.t = function(t, e)
+    {
+        if(1 & e && (t = n(t)), 8 & e) return t;
+        if(4 & e && "object" === typeof t && t && t.__esModule) return t;
+        var r = Object.create(null);
+        if(n.r(r), Object.defineProperty(r, "default",
+            {
+                enumerable: !0,
+                value: t
+            }), 2 & e && "string" != typeof t)
+            for(var o in t) n.d(r, o, function(e)
+            {
+                return t[e]
+            }.bind(null, o));
+        return r
+    }, n.n = function(t)
+    {
+        var e = t && t.__esModule ? function()
+        {
+            return t.default
+        } : function()
+        {
+            return t
+        };
+        return n.d(e, "a", e), e
+    }, n.o = function(t, e)
+    {
+        return Object.prototype.hasOwnProperty.call(t, e)
+    }, n.p = "/", n(n.s = 17)
+}([function(t, e, n)
+{
+    "use strict";
+
+    function r(t, e)
+    {
+        if(!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
+    }
+    n.d(e, "a", function()
+    {
+        return r
     })
-});
+}, , function(t, e, n)
+{
+    "use strict";
 
+    function r(t, e)
+    {
+        if(!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
+    }
+    n.d(e, "a", function()
+    {
+        return r
+    })
+}, function(t, e, n)
+{
+    "use strict";
 
-var uri = window.location.toString();
-if(uri.indexOf("%3D", "%3D") > 0)
+    function r(t, e)
+    {
+        for(var n = 0; n < e.length; n++)
+        {
+            var r = e[n];
+            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r)
+        }
+    }
+
+    function o(t, e, n)
+    {
+        return e && r(t.prototype, e), n && r(t, n), t
+    }
+    n.d(e, "a", function()
+    {
+        return o
+    })
+}, function(t, e, n)
 {
-    var clean_uri = uri.substring(0, uri.indexOf("%3D"));
-    window.history.replaceState(
-    {}, document.title, clean_uri);
-}
-var uri = window.location.toString();
-if(uri.indexOf("%3D%3D", "%3D%3D") > 0)
+    "use strict";
+
+    function r(t)
+    {
+        return (r = Object.setPrototypeOf ? Object.getPrototypeOf : function(t)
+        {
+            return t.__proto__ || Object.getPrototypeOf(t)
+        })(t)
+    }
+    n.d(e, "a", function()
+    {
+        return r
+    })
+}, function(t, e, n)
 {
-    var clean_uri = uri.substring(0, uri.indexOf("%3D%3D"));
-    window.history.replaceState(
-    {}, document.title, clean_uri);
-}
-var uri = window.location.toString();
-if(uri.indexOf("&m=1", "&m=1") > 0)
+    "use strict";
+
+    function r(t)
+    {
+        return (r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function(t)
+        {
+            return typeof t
+        } : function(t)
+        {
+            return t && "function" === typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+        })(t)
+    }
+
+    function o(t)
+    {
+        return (o = "function" === typeof Symbol && "symbol" === r(Symbol.iterator) ? function(t)
+        {
+            return r(t)
+        } : function(t)
+        {
+            return t && "function" === typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : r(t)
+        })(t)
+    }
+
+    function i(t, e)
+    {
+        return !e || "object" !== o(e) && "function" !== typeof e ? function(t)
+        {
+            if(void 0 === t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            return t
+        }(t) : e
+    }
+    n.d(e, "a", function()
+    {
+        return i
+    })
+}, function(t, e, n)
 {
-    var clean_uri = uri.substring(0, uri.indexOf("&m=1"));
-    window.history.replaceState(
-    {}, document.title, clean_uri);
-}
-var uri = window.location.toString();
-if(uri.indexOf("?m=1", "?m=1") > 0)
+    "use strict";
+
+    function r(t, e)
+    {
+        return (r = Object.setPrototypeOf || function(t, e)
+        {
+            return t.__proto__ = e, t
+        })(t, e)
+    }
+
+    function o(t, e)
+    {
+        if("function" !== typeof e && null !== e) throw new TypeError("Super expression must either be null or a function");
+        t.prototype = Object.create(e && e.prototype,
+        {
+            constructor:
+            {
+                value: t,
+                writable: !0,
+                configurable: !0
+            }
+        }), e && r(t, e)
+    }
+    n.d(e, "a", function()
+    {
+        return o
+    })
+}, function(t, e, n)
 {
-    var clean_uri = uri.substring(0, uri.indexOf("?m=1"));
-    window.history.replaceState(
-    {}, document.title, clean_uri);
-};
-var protocol = window.location.protocol.replace(/\:/g, '');
-if(protocol == 'http')
+    "undefined" != typeof self && self, t.exports = function(t)
+    {
+        function e(r)
+        {
+            if(n[r]) return n[r].exports;
+            var o = n[r] = {
+                i: r,
+                l: !1,
+                exports:
+                {}
+            };
+            return t[r].call(o.exports, o, o.exports, e), o.l = !0, o.exports
+        }
+        var n = {};
+        return e.m = t, e.c = n, e.d = function(t, n, r)
+        {
+            e.o(t, n) || Object.defineProperty(t, n,
+            {
+                configurable: !1,
+                enumerable: !0,
+                get: r
+            })
+        }, e.n = function(t)
+        {
+            var n = t && t.__esModule ? function()
+            {
+                return t.default
+            } : function()
+            {
+                return t
+            };
+            return e.d(n, "a", n), n
+        }, e.o = function(t, e)
+        {
+            return Object.prototype.hasOwnProperty.call(t, e)
+        }, e.p = "", e(e.s = 0)
+    }([function(t, e, n)
+    {
+        "use strict";
+        Object.defineProperty(e, "__esModule",
+        {
+            value: !0
+        });
+        var r = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(t)
+            {
+                return typeof t
+            } : function(t)
+            {
+                return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+            },
+            o = function()
+            {
+                function t(t, e)
+                {
+                    for(var n = 0; n < e.length; n++)
+                    {
+                        var r = e[n];
+                        r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r)
+                    }
+                }
+                return function(e, n, r)
+                {
+                    return n && t(e.prototype, n), r && t(e, r), e
+                }
+            }(),
+            i = function()
+            {
+                function t(e)
+                {
+                    var n = this;
+                    if(function(t, e)
+                        {
+                            if(!(t instanceof e)) throw new TypeError("Cannot call a class as a function")
+                        }(this, t), this.config = t.mergeSettings(e), this.selector = "string" == typeof this.config.selector ? document.querySelector(this.config.selector) : this.config.selector, null === this.selector) throw new Error("Something wrong with your selector \ud83d\ude2d");
+                    this.resolveSlidesNumber(), this.selectorWidth = this.selector.offsetWidth, this.innerElements = [].slice.call(this.selector.children), this.currentSlide = this.config.loop ? this.config.startIndex % this.innerElements.length : Math.max(0, Math.min(this.config.startIndex, this.innerElements.length - this.perPage)), this.transformProperty = t.webkitOrNot(), ["resizeHandler", "touchstartHandler", "touchendHandler", "touchmoveHandler", "mousedownHandler", "mouseupHandler", "mouseleaveHandler", "mousemoveHandler", "clickHandler"].forEach(function(t)
+                    {
+                        n[t] = n[t].bind(n)
+                    }), this.init()
+                }
+                return o(t, [
+                {
+                    key: "attachEvents",
+                    value: function()
+                    {
+                        window.addEventListener("resize", this.resizeHandler), this.config.draggable && (this.pointerDown = !1, this.drag = {
+                            startX: 0,
+                            endX: 0,
+                            startY: 0,
+                            letItGo: null,
+                            preventClick: !1
+                        }, this.selector.addEventListener("touchstart", this.touchstartHandler), this.selector.addEventListener("touchend", this.touchendHandler), this.selector.addEventListener("touchmove", this.touchmoveHandler), this.selector.addEventListener("mousedown", this.mousedownHandler), this.selector.addEventListener("mouseup", this.mouseupHandler), this.selector.addEventListener("mouseleave", this.mouseleaveHandler), this.selector.addEventListener("mousemove", this.mousemoveHandler), this.selector.addEventListener("click", this.clickHandler))
+                    }
+                },
+                {
+                    key: "detachEvents",
+                    value: function()
+                    {
+                        window.removeEventListener("resize", this.resizeHandler), this.selector.removeEventListener("touchstart", this.touchstartHandler), this.selector.removeEventListener("touchend", this.touchendHandler), this.selector.removeEventListener("touchmove", this.touchmoveHandler), this.selector.removeEventListener("mousedown", this.mousedownHandler), this.selector.removeEventListener("mouseup", this.mouseupHandler), this.selector.removeEventListener("mouseleave", this.mouseleaveHandler), this.selector.removeEventListener("mousemove", this.mousemoveHandler), this.selector.removeEventListener("click", this.clickHandler)
+                    }
+                },
+                {
+                    key: "init",
+                    value: function()
+                    {
+                        this.attachEvents(), this.selector.style.overflow = "hidden", this.selector.style.direction = this.config.rtl ? "rtl" : "ltr", this.buildSliderFrame(), this.config.onInit.call(this)
+                    }
+                },
+                {
+                    key: "buildSliderFrame",
+                    value: function()
+                    {
+                        var t = this.selectorWidth / this.perPage,
+                            e = this.config.loop ? this.innerElements.length + 2 * this.perPage : this.innerElements.length;
+                        this.sliderFrame = document.createElement("div"), this.sliderFrame.style.width = t * e + "px", this.enableTransition(), this.config.draggable && (this.selector.style.cursor = "-webkit-grab");
+                        var n = document.createDocumentFragment();
+                        if(this.config.loop)
+                            for(var r = this.innerElements.length - this.perPage; r < this.innerElements.length; r++)
+                            {
+                                var o = this.buildSliderFrameItem(this.innerElements[r].cloneNode(!0));
+                                n.appendChild(o)
+                            }
+                        for(var i = 0; i < this.innerElements.length; i++)
+                        {
+                            var a = this.buildSliderFrameItem(this.innerElements[i]);
+                            n.appendChild(a)
+                        }
+                        if(this.config.loop)
+                            for(var s = 0; s < this.perPage; s++)
+                            {
+                                var c = this.buildSliderFrameItem(this.innerElements[s].cloneNode(!0));
+                                n.appendChild(c)
+                            }
+                        this.sliderFrame.appendChild(n), this.selector.innerHTML = "", this.selector.appendChild(this.sliderFrame), this.slideToCurrent()
+                    }
+                },
+                {
+                    key: "buildSliderFrameItem",
+                    value: function(t)
+                    {
+                        var e = document.createElement("div");
+                        return e.style.cssFloat = this.config.rtl ? "right" : "left", e.style.float = this.config.rtl ? "right" : "left", e.style.width = (this.config.loop ? 100 / (this.innerElements.length + 2 * this.perPage) : 100 / this.innerElements.length) + "%", e.appendChild(t), e
+                    }
+                },
+                {
+                    key: "resolveSlidesNumber",
+                    value: function()
+                    {
+                        if("number" == typeof this.config.perPage) this.perPage = this.config.perPage;
+                        else if("object" === r(this.config.perPage))
+                            for(var t in this.perPage = 1, this.config.perPage) window.innerWidth >= t && (this.perPage = this.config.perPage[t])
+                    }
+                },
+                {
+                    key: "prev",
+                    value: function()
+                    {
+                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+                            e = arguments[1];
+                        if(!(this.innerElements.length <= this.perPage))
+                        {
+                            var n = this.currentSlide;
+                            if(this.config.loop)
+                                if(this.currentSlide - t < 0)
+                                {
+                                    this.disableTransition();
+                                    var r = this.currentSlide + this.innerElements.length,
+                                        o = this.perPage,
+                                        i = r + o,
+                                        a = (this.config.rtl ? 1 : -1) * i * (this.selectorWidth / this.perPage),
+                                        s = this.config.draggable ? this.drag.endX - this.drag.startX : 0;
+                                    this.sliderFrame.style[this.transformProperty] = "translate3d(" + (a + s) + "px, 0, 0)", this.currentSlide = r - t
+                                }
+                            else this.currentSlide = this.currentSlide - t;
+                            else this.currentSlide = Math.max(this.currentSlide - t, 0);
+                            n !== this.currentSlide && (this.slideToCurrent(this.config.loop), this.config.onChange.call(this), e && e.call(this))
+                        }
+                    }
+                },
+                {
+                    key: "next",
+                    value: function()
+                    {
+                        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+                            e = arguments[1];
+                        if(!(this.innerElements.length <= this.perPage))
+                        {
+                            var n = this.currentSlide;
+                            if(this.config.loop)
+                                if(this.currentSlide + t > this.innerElements.length - this.perPage)
+                                {
+                                    this.disableTransition();
+                                    var r = this.currentSlide - this.innerElements.length,
+                                        o = this.perPage,
+                                        i = r + o,
+                                        a = (this.config.rtl ? 1 : -1) * i * (this.selectorWidth / this.perPage),
+                                        s = this.config.draggable ? this.drag.endX - this.drag.startX : 0;
+                                    this.sliderFrame.style[this.transformProperty] = "translate3d(" + (a + s) + "px, 0, 0)", this.currentSlide = r + t
+                                }
+                            else this.currentSlide = this.currentSlide + t;
+                            else this.currentSlide = Math.min(this.currentSlide + t, this.innerElements.length - this.perPage);
+                            n !== this.currentSlide && (this.slideToCurrent(this.config.loop), this.config.onChange.call(this), e && e.call(this))
+                        }
+                    }
+                },
+                {
+                    key: "disableTransition",
+                    value: function()
+                    {
+                        this.sliderFrame.style.webkitTransition = "all 0ms " + this.config.easing, this.sliderFrame.style.transition = "all 0ms " + this.config.easing
+                    }
+                },
+                {
+                    key: "enableTransition",
+                    value: function()
+                    {
+                        this.sliderFrame.style.webkitTransition = "all " + this.config.duration + "ms " + this.config.easing, this.sliderFrame.style.transition = "all " + this.config.duration + "ms " + this.config.easing
+                    }
+                },
+                {
+                    key: "goTo",
+                    value: function(t, e)
+                    {
+                        if(!(this.innerElements.length <= this.perPage))
+                        {
+                            var n = this.currentSlide;
+                            this.currentSlide = this.config.loop ? t % this.innerElements.length : Math.min(Math.max(t, 0), this.innerElements.length - this.perPage), n !== this.currentSlide && (this.slideToCurrent(), this.config.onChange.call(this), e && e.call(this))
+                        }
+                    }
+                },
+                {
+                    key: "slideToCurrent",
+                    value: function(t)
+                    {
+                        var e = this,
+                            n = this.config.loop ? this.currentSlide + this.perPage : this.currentSlide,
+                            r = (this.config.rtl ? 1 : -1) * n * (this.selectorWidth / this.perPage);
+                        t ? requestAnimationFrame(function()
+                        {
+                            requestAnimationFrame(function()
+                            {
+                                e.enableTransition(), e.sliderFrame.style[e.transformProperty] = "translate3d(" + r + "px, 0, 0)"
+                            })
+                        }) : this.sliderFrame.style[this.transformProperty] = "translate3d(" + r + "px, 0, 0)"
+                    }
+                },
+                {
+                    key: "updateAfterDrag",
+                    value: function()
+                    {
+                        var t = (this.config.rtl ? -1 : 1) * (this.drag.endX - this.drag.startX),
+                            e = Math.abs(t),
+                            n = this.config.multipleDrag ? Math.ceil(e / (this.selectorWidth / this.perPage)) : 1,
+                            r = t > 0 && this.currentSlide - n < 0,
+                            o = t < 0 && this.currentSlide + n > this.innerElements.length - this.perPage;
+                        t > 0 && e > this.config.threshold && this.innerElements.length > this.perPage ? this.prev(n) : t < 0 && e > this.config.threshold && this.innerElements.length > this.perPage && this.next(n), this.slideToCurrent(r || o)
+                    }
+                },
+                {
+                    key: "resizeHandler",
+                    value: function()
+                    {
+                        this.resolveSlidesNumber(), this.currentSlide + this.perPage > this.innerElements.length && (this.currentSlide = this.innerElements.length <= this.perPage ? 0 : this.innerElements.length - this.perPage), this.selectorWidth = this.selector.offsetWidth, this.buildSliderFrame()
+                    }
+                },
+                {
+                    key: "clearDrag",
+                    value: function()
+                    {
+                        this.drag = {
+                            startX: 0,
+                            endX: 0,
+                            startY: 0,
+                            letItGo: null,
+                            preventClick: this.drag.preventClick
+                        }
+                    }
+                },
+                {
+                    key: "touchstartHandler",
+                    value: function(t)
+                    {
+                        -1 !== ["TEXTAREA", "OPTION", "INPUT", "SELECT"].indexOf(t.target.nodeName) || (t.stopPropagation(), this.pointerDown = !0, this.drag.startX = t.touches[0].pageX, this.drag.startY = t.touches[0].pageY)
+                    }
+                },
+                {
+                    key: "touchendHandler",
+                    value: function(t)
+                    {
+                        t.stopPropagation(), this.pointerDown = !1, this.enableTransition(), this.drag.endX && this.updateAfterDrag(), this.clearDrag()
+                    }
+                },
+                {
+                    key: "touchmoveHandler",
+                    value: function(t)
+                    {
+                        if(t.stopPropagation(), null === this.drag.letItGo && (this.drag.letItGo = Math.abs(this.drag.startY - t.touches[0].pageY) < Math.abs(this.drag.startX - t.touches[0].pageX)), this.pointerDown && this.drag.letItGo)
+                        {
+                            t.preventDefault(), this.drag.endX = t.touches[0].pageX, this.sliderFrame.style.webkitTransition = "all 0ms " + this.config.easing, this.sliderFrame.style.transition = "all 0ms " + this.config.easing;
+                            var e = this.config.loop ? this.currentSlide + this.perPage : this.currentSlide,
+                                n = e * (this.selectorWidth / this.perPage),
+                                r = this.drag.endX - this.drag.startX,
+                                o = this.config.rtl ? n + r : n - r;
+                            this.sliderFrame.style[this.transformProperty] = "translate3d(" + (this.config.rtl ? 1 : -1) * o + "px, 0, 0)"
+                        }
+                    }
+                },
+                {
+                    key: "mousedownHandler",
+                    value: function(t)
+                    {
+                        -1 !== ["TEXTAREA", "OPTION", "INPUT", "SELECT"].indexOf(t.target.nodeName) || (t.preventDefault(), t.stopPropagation(), this.pointerDown = !0, this.drag.startX = t.pageX)
+                    }
+                },
+                {
+                    key: "mouseupHandler",
+                    value: function(t)
+                    {
+                        t.stopPropagation(), this.pointerDown = !1, this.selector.style.cursor = "-webkit-grab", this.enableTransition(), this.drag.endX && this.updateAfterDrag(), this.clearDrag()
+                    }
+                },
+                {
+                    key: "mousemoveHandler",
+                    value: function(t)
+                    {
+                        if(t.preventDefault(), this.pointerDown)
+                        {
+                            "A" === t.target.nodeName && (this.drag.preventClick = !0), this.drag.endX = t.pageX, this.selector.style.cursor = "-webkit-grabbing", this.sliderFrame.style.webkitTransition = "all 0ms " + this.config.easing, this.sliderFrame.style.transition = "all 0ms " + this.config.easing;
+                            var e = this.config.loop ? this.currentSlide + this.perPage : this.currentSlide,
+                                n = e * (this.selectorWidth / this.perPage),
+                                r = this.drag.endX - this.drag.startX,
+                                o = this.config.rtl ? n + r : n - r;
+                            this.sliderFrame.style[this.transformProperty] = "translate3d(" + (this.config.rtl ? 1 : -1) * o + "px, 0, 0)"
+                        }
+                    }
+                },
+                {
+                    key: "mouseleaveHandler",
+                    value: function(t)
+                    {
+                        this.pointerDown && (this.pointerDown = !1, this.selector.style.cursor = "-webkit-grab", this.drag.endX = t.pageX, this.drag.preventClick = !1, this.enableTransition(), this.updateAfterDrag(), this.clearDrag())
+                    }
+                },
+                {
+                    key: "clickHandler",
+                    value: function(t)
+                    {
+                        this.drag.preventClick && t.preventDefault(), this.drag.preventClick = !1
+                    }
+                },
+                {
+                    key: "remove",
+                    value: function(t, e)
+                    {
+                        if(t < 0 || t >= this.innerElements.length) throw new Error("Item to remove doesn't exist \ud83d\ude2d");
+                        var n = t < this.currentSlide,
+                            r = this.currentSlide + this.perPage - 1 === t;
+                        (n || r) && this.currentSlide--, this.innerElements.splice(t, 1), this.buildSliderFrame(), e && e.call(this)
+                    }
+                },
+                {
+                    key: "insert",
+                    value: function(t, e, n)
+                    {
+                        if(e < 0 || e > this.innerElements.length + 1) throw new Error("Unable to inset it at this index \ud83d\ude2d");
+                        if(-1 !== this.innerElements.indexOf(t)) throw new Error("The same item in a carousel? Really? Nope \ud83d\ude2d");
+                        var r = e <= this.currentSlide > 0 && this.innerElements.length;
+                        this.currentSlide = r ? this.currentSlide + 1 : this.currentSlide, this.innerElements.splice(e, 0, t), this.buildSliderFrame(), n && n.call(this)
+                    }
+                },
+                {
+                    key: "prepend",
+                    value: function(t, e)
+                    {
+                        this.insert(t, 0), e && e.call(this)
+                    }
+                },
+                {
+                    key: "append",
+                    value: function(t, e)
+                    {
+                        this.insert(t, this.innerElements.length + 1), e && e.call(this)
+                    }
+                },
+                {
+                    key: "destroy",
+                    value: function()
+                    {
+                        var t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+                            e = arguments[1];
+                        if(this.detachEvents(), this.selector.style.cursor = "auto", t)
+                        {
+                            for(var n = document.createDocumentFragment(), r = 0; r < this.innerElements.length; r++) n.appendChild(this.innerElements[r]);
+                            this.selector.innerHTML = "", this.selector.appendChild(n), this.selector.removeAttribute("style")
+                        }
+                        e && e.call(this)
+                    }
+                }], [
+                {
+                    key: "mergeSettings",
+                    value: function(t)
+                    {
+                        var e = {
+                                selector: ".siema",
+                                duration: 200,
+                                easing: "ease-out",
+                                perPage: 1,
+                                startIndex: 0,
+                                draggable: !0,
+                                multipleDrag: !0,
+                                threshold: 20,
+                                loop: !1,
+                                rtl: !1,
+                                onInit: function() {},
+                                onChange: function() {}
+                            },
+                            n = t;
+                        for(var r in n) e[r] = n[r];
+                        return e
+                    }
+                },
+                {
+                    key: "webkitOrNot",
+                    value: function()
+                    {
+                        return "string" == typeof document.documentElement.style.transform ? "transform" : "WebkitTransform"
+                    }
+                }]), t
+            }();
+        e.default = i, t.exports = e.default
+    }])
+}, , function(t, e, n)
 {
-    var url = window.location.href.replace('http', 'https');
-    window.location.replace(url);
-}
+    t.exports = function()
+    {
+        "use strict";
+
+        function t()
+        {
+            var t = new Date;
+            return t.setHours(0, 0, 0, 0), t
+        }
+
+        function e(t, e)
+        {
+            return (t && t.toDateString()) === (e && e.toDateString())
+        }
+
+        function n(t, e, n)
+        {
+            var r = (t = new Date(t)).getDate(),
+                o = t.getMonth() + e;
+            return t.setDate(1), t.setMonth(n ? (12 + o) % 12 : o), t.setDate(r), t.getDate() < r && t.setDate(0), t
+        }
+
+        function r(t, e)
+        {
+            return (t = new Date(t)).setFullYear(t.getFullYear() + e), t
+        }
+
+        function o(t)
+        {
+            return function(e)
+            {
+                return function(t)
+                {
+                    return (t = new Date(t)).setHours(0, 0, 0, 0), t
+                }("string" === typeof e ? t(e) : e)
+            }
+        }
+
+        function i(t, e, n)
+        {
+            return t < e ? e : t > n ? n : t
+        }
+
+        function a(t, e)
+        {
+            var n = void 0;
+            return function()
+            {
+                clearTimeout(n), n = setTimeout(e, t)
+            }
+        }
+
+        function s()
+        {}
+
+        function c()
+        {
+            for(var t = arguments, e = t[0], n = 1; n < t.length; ++n)
+            {
+                var r = t[n] ||
+                {};
+                for(var o in r) e[o] = r[o]
+            }
+            return e
+        }
+        var l = {
+            days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            today: "Today",
+            clear: "Clear",
+            close: "Close"
+        };
+
+        function u(e)
+        {
+            e = e ||
+            {};
+            var n = o((e = c(
+            {
+                lang: l,
+                mode: "dp-modal",
+                hilightedDate: t(),
+                format: function(t)
+                {
+                    return t.getMonth() + 1 + "/" + t.getDate() + "/" + t.getFullYear()
+                },
+                parse: function(e)
+                {
+                    var n = new Date(e);
+                    return isNaN(n) ? t() : n
+                },
+                dateClass: function() {},
+                inRange: function()
+                {
+                    return !0
+                }
+            }, e)).parse);
+            return e.lang = c(l, e.lang), e.parse = n, e.inRange = function(t)
+            {
+                var e = t.inRange;
+                return function(n, r)
+                {
+                    return e(n, r) && t.min <= n && t.max >= n
+                }
+            }(e), e.min = n(e.min || r(t(), -100)), e.max = n(e.max || r(t(), 100)), e.hilightedDate = e.parse(e.hilightedDate), e
+        }
+        var h = {
+            left: 37,
+            up: 38,
+            right: 39,
+            down: 40,
+            enter: 13,
+            esc: 27
+        };
+
+        function d(t, e, n)
+        {
+            return e.addEventListener(t, n, !0),
+                function()
+                {
+                    e.removeEventListener(t, n, !0)
+                }
+        }
+        var f = function()
+            {
+                var t = window.CustomEvent;
+                return "function" !== typeof t && ((t = function(t, e)
+                {
+                    e = e ||
+                    {
+                        bubbles: !1,
+                        cancelable: !1,
+                        detail: void 0
+                    };
+                    var n = document.createEvent("CustomEvent");
+                    return n.initCustomEvent(t, e.bubbles, e.cancelable, e.detail), n
+                }).prototype = window.Event.prototype), t
+            }(),
+            m = {
+                day:
+                {
+                    onKeyDown: function(t, e)
+                    {
+                        var n, r, o = t.keyCode,
+                            i = o === h.left ? -1 : o === h.right ? 1 : o === h.up ? -7 : o === h.down ? 7 : 0;
+                        o === h.esc ? e.close() : i && (t.preventDefault(), e.setState(
+                        {
+                            hilightedDate: (n = e.state.hilightedDate, r = i, (n = new Date(n)).setDate(n.getDate() + r), n)
+                        }))
+                    },
+                    onClick:
+                    {
+                        "dp-day": function(t, e)
+                        {
+                            e.setState(
+                            {
+                                selectedDate: new Date(parseInt(t.target.getAttribute("data-date")))
+                            })
+                        },
+                        "dp-next": function(t, e)
+                        {
+                            var r = e.state.hilightedDate;
+                            e.setState(
+                            {
+                                hilightedDate: n(r, 1)
+                            })
+                        },
+                        "dp-prev": function(t, e)
+                        {
+                            var r = e.state.hilightedDate;
+                            e.setState(
+                            {
+                                hilightedDate: n(r, -1)
+                            })
+                        },
+                        "dp-today": function(e, n)
+                        {
+                            n.setState(
+                            {
+                                selectedDate: t()
+                            })
+                        },
+                        "dp-clear": function(t, e)
+                        {
+                            e.setState(
+                            {
+                                selectedDate: null
+                            })
+                        },
+                        "dp-close": function(t, e)
+                        {
+                            e.close()
+                        },
+                        "dp-cal-month": function(t, e)
+                        {
+                            e.setState(
+                            {
+                                view: "month"
+                            })
+                        },
+                        "dp-cal-year": function(t, e)
+                        {
+                            e.setState(
+                            {
+                                view: "year"
+                            })
+                        }
+                    },
+                    render: function(n)
+                    {
+                        var r = n.opts,
+                            o = r.lang,
+                            i = n.state,
+                            a = o.days,
+                            s = r.dayOffset || 0,
+                            c = i.selectedDate,
+                            l = i.hilightedDate,
+                            u = l.getMonth(),
+                            h = t().getTime();
+                        return '<div class="dp-cal"><header class="dp-cal-header"><button tabindex="-1" type="button" class="dp-prev">Prev</button><button tabindex="-1" type="button" class="dp-cal-month">' + o.months[u] + '</button><button tabindex="-1" type="button" class="dp-cal-year">' + l.getFullYear() + '</button><button tabindex="-1" type="button" class="dp-next">Next</button></header><div class="dp-days">' + a.map(function(t, e)
+                        {
+                            return '<span class="dp-col-header">' + a[(e + s) % a.length] + "</span>"
+                        }).join("") + function(t, e, n)
+                        {
+                            var r = "",
+                                o = new Date(t);
+                            o.setDate(1), o.setDate(1 - o.getDay() + e), e && o.getDate() === e + 1 && o.setDate(e - 6);
+                            for(var i = 0; i < 42; ++i) r += n(o), o.setDate(o.getDate() + 1);
+                            return r
+                        }(l, s, function(t)
+                        {
+                            var o = t.getMonth() !== u,
+                                i = !r.inRange(t),
+                                a = t.getTime() === h,
+                                s = "dp-day";
+                            return s += o ? " dp-edge-day" : "", s += e(t, l) ? " dp-current" : "", s += e(t, c) ? " dp-selected" : "", s += i ? " dp-day-disabled" : "", s += a ? " dp-day-today" : "", '<button tabindex="-1" type="button" class="' + (s += " " + r.dateClass(t, n)) + '" data-date="' + t.getTime() + '">' + t.getDate() + "</button>"
+                        }) + '</div><footer class="dp-cal-footer"><button tabindex="-1" type="button" class="dp-today">' + o.today + '</button><button tabindex="-1" type="button" class="dp-clear">' + o.clear + '</button><button tabindex="-1" type="button" class="dp-close">' + o.close + "</button></footer></div>"
+                    }
+                },
+                year:
+                {
+                    render: function(t)
+                    {
+                        var e = t.state,
+                            n = e.hilightedDate.getFullYear(),
+                            r = e.selectedDate.getFullYear();
+                        return '<div class="dp-years">' + function(t, e)
+                        {
+                            for(var n = "", r = t.opts.max.getFullYear(); r >= t.opts.min.getFullYear(); --r) n += e(r);
+                            return n
+                        }(t, function(t)
+                        {
+                            var e = "dp-year";
+                            return e += t === n ? " dp-current" : "", '<button tabindex="-1" type="button" class="' + (e += t === r ? " dp-selected" : "") + '" data-year="' + t + '">' + t + "</button>"
+                        }) + "</div>"
+                    },
+                    onKeyDown: function(t, e)
+                    {
+                        var n = t.keyCode,
+                            o = e.opts,
+                            a = n === h.left || n === h.up ? 1 : n === h.right || n === h.down ? -1 : 0;
+                        if(n === h.esc) e.setState(
+                        {
+                            view: "day"
+                        });
+                        else if(a)
+                        {
+                            t.preventDefault();
+                            var s = r(e.state.hilightedDate, a);
+                            e.setState(
+                            {
+                                hilightedDate: i(s, o.min, o.max)
+                            })
+                        }
+                    },
+                    onClick:
+                    {
+                        "dp-year": function(t, e)
+                        {
+                            var n, r;
+                            e.setState(
+                            {
+                                hilightedDate: (n = e.state.hilightedDate, r = parseInt(t.target.getAttribute("data-year")), (n = new Date(n)).setFullYear(r), n),
+                                view: "day"
+                            })
+                        }
+                    }
+                },
+                month:
+                {
+                    onKeyDown: function(t, e)
+                    {
+                        var r = t.keyCode,
+                            o = r === h.left ? -1 : r === h.right ? 1 : r === h.up ? -3 : r === h.down ? 3 : 0;
+                        r === h.esc ? e.setState(
+                        {
+                            view: "day"
+                        }) : o && (t.preventDefault(), e.setState(
+                        {
+                            hilightedDate: n(e.state.hilightedDate, o, !0)
+                        }))
+                    },
+                    onClick:
+                    {
+                        "dp-month": function(t, e)
+                        {
+                            var r, o;
+                            e.setState(
+                            {
+                                hilightedDate: (r = e.state.hilightedDate, o = parseInt(t.target.getAttribute("data-month")), n(r, o - r.getMonth())),
+                                view: "day"
+                            })
+                        }
+                    },
+                    render: function(t)
+                    {
+                        var e = t.opts.lang.months,
+                            n = t.state.hilightedDate.getMonth();
+                        return '<div class="dp-months">' + e.map(function(t, e)
+                        {
+                            var r = "dp-month";
+                            return '<button tabindex="-1" type="button" class="' + (r += n === e ? " dp-current" : "") + '" data-month="' + e + '">' + t + "</button>"
+                        }).join("") + "</div>"
+                    }
+                }
+            };
+
+        function p(t, e, n)
+        {
+            var r, o, c = !1,
+                l = {
+                    el: void 0,
+                    opts: n,
+                    shouldFocusOnBlur: !0,
+                    shouldFocusOnRender: !0,
+                    state:
+                    {
+                        get selectedDate()
+                        {
+                            return o
+                        },
+                        set selectedDate(t)
+                        {
+                            t && !n.inRange(t) || (t ? (o = new Date(t), l.state.hilightedDate = o) : o = t, l.updateInput(o), e("select"), l.close())
+                        },
+                        view: "day"
+                    },
+                    adjustPosition: s,
+                    containerHTML: '<div class="dp"></div>',
+                    attachToDom: function()
+                    {
+                        document.body.appendChild(l.el)
+                    },
+                    updateInput: function(e)
+                    {
+                        var r = new f("change",
+                        {
+                            bubbles: !0
+                        });
+                        r.simulated = !0, t.value = e ? n.format(e) : "", t.dispatchEvent(r)
+                    },
+                    computeSelectedDate: function()
+                    {
+                        return n.parse(t.value)
+                    },
+                    currentView: function()
+                    {
+                        return m[l.state.view]
+                    },
+                    open: function()
+                    {
+                        c || (l.el || (l.el = function(t, e)
+                        {
+                            var n = document.createElement("div");
+                            return n.className = t.mode, n.innerHTML = e, n
+                        }(n, l.containerHTML), function(t)
+                        {
+                            var e = t.el,
+                                n = e.querySelector(".dp");
+
+                            function r(e)
+                            {
+                                e.target.className.split(" ").forEach(function(n)
+                                {
+                                    var r = t.currentView().onClick[n];
+                                    r && r(e, t)
+                                })
+                            }
+                            e.ontouchstart = s, d("blur", n, a(150, function()
+                            {
+                                t.hasFocus() || t.close(!0)
+                            })), d("keydown", e, function(e)
+                            {
+                                e.keyCode === h.enter ? r(e) : t.currentView().onKeyDown(e, t)
+                            }), d("mousedown", n, function(e)
+                            {
+                                e.target.focus && e.target.focus(), document.activeElement !== e.target && (e.preventDefault(), g(t))
+                            }), d("click", e, r)
+                        }(l)), o = i(l.computeSelectedDate(), n.min, n.max), l.state.hilightedDate = o || n.hilightedDate, l.state.view = "day", l.attachToDom(), l.render(), e("open"))
+                    },
+                    isVisible: function()
+                    {
+                        return !!l.el && !!l.el.parentNode
+                    },
+                    hasFocus: function()
+                    {
+                        var t = document.activeElement;
+                        return l.el && l.el.contains(t) && t.className.indexOf("dp-focuser") < 0
+                    },
+                    shouldHide: function()
+                    {
+                        return l.isVisible()
+                    },
+                    close: function(n)
+                    {
+                        var r = l.el;
+                        if(l.isVisible())
+                        {
+                            if(r)
+                            {
+                                var o = r.parentNode;
+                                o && o.removeChild(r)
+                            }
+                            c = !0, n && l.shouldFocusOnBlur && function(t)
+                            {
+                                t.focus(), /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && t.blur()
+                            }(t), setTimeout(function()
+                            {
+                                c = !1
+                            }, 100), e("close")
+                        }
+                    },
+                    destroy: function()
+                    {
+                        l.close(), r()
+                    },
+                    render: function()
+                    {
+                        if(l.el && l.el.firstChild)
+                        {
+                            var t = l.hasFocus(),
+                                e = l.currentView().render(l);
+                            e && (l.el.firstChild.innerHTML = e), l.adjustPosition(), (t || l.shouldFocusOnRender) && g(l)
+                        }
+                    },
+                    setState: function(t)
+                    {
+                        for(var n in t) l.state[n] = t[n];
+                        e("statechange"), l.render()
+                    }
+                };
+            return r = function(t, e)
+            {
+                var n = a(5, function()
+                    {
+                        e.shouldHide() ? e.close() : e.open()
+                    }),
+                    r = [d("blur", t, a(150, function()
+                    {
+                        e.hasFocus() || e.close(!0)
+                    })), d("mousedown", t, function()
+                    {
+                        t === document.activeElement && n()
+                    }), d("focus", t, n), d("input", t, function(t)
+                    {
+                        var n = e.opts.parse(t.target.value);
+                        isNaN(n) || e.setState(
+                        {
+                            hilightedDate: n
+                        })
+                    })];
+                return function()
+                {
+                    r.forEach(function(t)
+                    {
+                        t()
+                    })
+                }
+            }(t, l), l
+        }
+
+        function g(t)
+        {
+            var e = t.el.querySelector(".dp-current");
+            return e && e.focus()
+        }
+
+        function v(t, e, n)
+        {
+            var r = p(t, e, n);
+            return r.shouldFocusOnBlur = !1, Object.defineProperty(r, "shouldFocusOnRender",
+            {
+                get: function()
+                {
+                    return t !== document.activeElement
+                }
+            }), r.adjustPosition = function()
+            {
+                ! function(t, e)
+                {
+                    var n = t.getBoundingClientRect(),
+                        r = window;
+                    (function(t, e, n)
+                    {
+                        var r = t.el,
+                            o = n.pageYOffset,
+                            i = o + e.top,
+                            a = r.offsetHeight,
+                            s = i + e.height + 8,
+                            c = i - a - 8,
+                            l = c > 0 && s + a > o + n.innerHeight,
+                            u = l ? c : s;
+                        r.classList && (r.classList.toggle("dp-is-above", l), r.classList.toggle("dp-is-below", !l)), r.style.top = u + "px"
+                    })(e, n, r),
+                    function(t, e, n)
+                    {
+                        var r = t.el,
+                            o = n.pageXOffset,
+                            i = e.left + o,
+                            a = n.innerWidth + o,
+                            s = r.offsetWidth,
+                            c = a - s,
+                            l = i + s > a && c > 0 ? c : i;
+                        r.style.left = l + "px"
+                    }(e, n, r), e.el.style.visibility = ""
+                }(t, r)
+            }, r
+        }
+
+        function y(t, e, n)
+        {
+            return t = t && t.tagName ? t : document.querySelector(t), "dp-modal" === n.mode ? function(t, e, n)
+            {
+                var r = p(t, e, n);
+                return t.readonly = !0, r.containerHTML += '<a href="#" class="dp-focuser">.</a>', r
+            }(t, e, n) : "dp-below" === n.mode ? v(t, e, n) : "dp-permanent" === n.mode ? function(t, e, n)
+            {
+                var r = p(t, e, n);
+                return r.close = s, r.destroy = s, r.updateInput = s, r.shouldFocusOnRender = n.shouldFocusOnRender, r.computeSelectedDate = function()
+                {
+                    return n.hilightedDate
+                }, r.attachToDom = function()
+                {
+                    t.appendChild(r.el)
+                }, r.open(), r
+            }(t, e, n) : void 0
+        }
+
+        function b()
+        {
+            var t = {};
+
+            function e(e, n)
+            {
+                (t[e] = t[e] || []).push(n)
+            }
+            return {
+                on: function(t, n)
+                {
+                    return n ? e(t, n) : function(t)
+                    {
+                        for(var n in t) e(n, t[n])
+                    }(t), this
+                },
+                emit: function(e, n)
+                {
+                    (t[e] || []).forEach(function(t)
+                    {
+                        t(e, n)
+                    })
+                },
+                off: function(e, n)
+                {
+                    return e ? t[e] = n ? (t[e] || []).filter(function(t)
+                    {
+                        return t !== n
+                    }) : [] : t = {}, this
+                }
+            }
+        }
+        return function(t, e)
+        {
+            var n = b(),
+                r = u(e),
+                o = y(t, function(t)
+                {
+                    n.emit(t, i)
+                }, r),
+                i = {
+                    get state()
+                    {
+                        return o.state
+                    },
+                    on: n.on,
+                    off: n.off,
+                    setState: o.setState,
+                    open: o.open,
+                    close: o.close,
+                    destroy: o.destroy
+                };
+            return i
+        }
+    }()
+}, , function(t, e, n) {}, function(t, e, n) {}, , , , , function(t, e, n)
+{
+    "use strict";
+    n.r(e);
+    var r = n(0),
+        o = n(7),
+        i = n.n(o),
+        a = function t()
+        {
+            var e = this;
+            Object(r.a)(this, t), this.root = document.querySelectorAll(".js-Slider-root") || null, this.mySiema = {}, null !== this.root && this.root.length > 0 && this.root.forEach(function(t, n)
+            {
+                e.mySiema[n] = new i.a(
+                {
+                    selector: t.querySelector(".js-Slider-item"),
+                    onChange: function()
+                    {
+                        for(var e = t.querySelectorAll(".NewsSlider-dotsItem"), n = 0; n < e.length; n++) n === Math.ceil(this.currentSlide) ? e[n].classList.add("NewsSlider-dotsItem_active") : e[n].classList.remove("NewsSlider-dotsItem_active")
+                    },
+                    rtl: !0,
+                    perPage: 1.2
+                }), i.a.prototype.addPagination = function(e)
+                {
+                    for(var n = this, r = function(e)
+                        {
+                            var r = document.createElement("span"),
+                                o = t.querySelector(".NewsSlider-dots");
+                            r.className = "NewsSlider-dotsItem", r.addEventListener("click", function()
+                            {
+                                return n.goTo(e)
+                            }), o.appendChild(r)
+                        }, o = 0; o < this.innerElements.length; o++) r(o);
+                    t.querySelectorAll(".NewsSlider-dotsItem")[0].classList.add("NewsSlider-dotsItem_active")
+                }, e.mySiema[n].addPagination()
+            })
+        };
+
+    function s(t)
+    {
+        return (s = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function(t)
+        {
+            return typeof t
+        } : function(t)
+        {
+            return t && "function" === typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : typeof t
+        })(t)
+    }
+
+    function c(t)
+    {
+        return (c = "function" === typeof Symbol && "symbol" === s(Symbol.iterator) ? function(t)
+        {
+            return s(t)
+        } : function(t)
+        {
+            return t && "function" === typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : s(t)
+        })(t)
+    }
+
+    function l(t)
+    {
+        if(void 0 === t) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+        return t
+    }
+
+    function u(t, e)
+    {
+        return !e || "object" !== c(e) && "function" !== typeof e ? l(t) : e
+    }
+
+    function h(t)
+    {
+        return (h = Object.setPrototypeOf ? Object.getPrototypeOf : function(t)
+        {
+            return t.__proto__ || Object.getPrototypeOf(t)
+        })(t)
+    }
+
+    function d(t, e)
+    {
+        return (d = Object.setPrototypeOf || function(t, e)
+        {
+            return t.__proto__ = e, t
+        })(t, e)
+    }
+
+    function f(t, e)
+    {
+        if("function" !== typeof e && null !== e) throw new TypeError("Super expression must either be null or a function");
+        t.prototype = Object.create(e && e.prototype,
+        {
+            constructor:
+            {
+                value: t,
+                writable: !0,
+                configurable: !0
+            }
+        }), e && d(t, e)
+    }
+    var m = function t()
+        {
+            Object(r.a)(this, t), this.create = function(t, e)
+            {
+                var n = document.body.querySelectorAll("[data-components=".concat(t, "]"));
+                n.length > 0 && (e(n), n.forEach(function(t)
+                {
+                    t.removeAttribute("data-components")
+                }))
+            }
+        },
+        p = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    l(l(n));
+                    n.root = t, n.data = n.root.onload(), n.elements[n.data.publicId] = t.querySelector(".Comments__counter"), n.createComment(n.data.publicId)
+                }, n.createComment = function(t)
+                {
+                    n.commentsId || (n.commentsId = []), n.commentsId.push(t)
+                }, n.getCommentCount = function()
+                {
+                    var t = l(l(n));
+                    fetch("https://www.spot.im/api/open-api/v1/messages-count?spot_id=sp_KjKAdRDl&posts_ids=" + t.commentsId.join("%2C"),
+                    {}).then(function(t)
+                    {
+                        return t.json()
+                    }).then(function(e)
+                    {
+                        e && e.messages_count && (t.addStats(e.messages_count), t.commentsId = [], t.elements = {})
+                    }).catch(function(t)
+                    {
+                        console.error(t)
+                    })
+                }, n.addStats = function(t)
+                {
+                    Object.keys(t).forEach(function(e)
+                    {
+                        void 0 !== n.elements[e] && (n.elements[e].classList.add("Comments__counter_active"), n.elements[e].innerHTML += t[e])
+                    })
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.elements = {}, n.create("Comments", function(t)
+                {
+                    0 !== t.length && (t.forEach(function(t)
+                    {
+                        n.init(t)
+                    }), n.getCommentCount())
+                }), n
+            }
+            return f(e, m), e
+        }();
+
+    function g(t, e)
+    {
+        for(var n = 0; n < e.length; n++)
+        {
+            var r = e[n];
+            r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(t, r.key, r)
+        }
+    }
+
+    function v(t, e, n)
+    {
+        return e && g(t.prototype, e), n && g(t, n), t
+    }
+    var y = function()
+        {
+            function t(e)
+            {
+                Object(r.a)(this, t);
+                var n = e ||
+                {};
+                this.blockClassName = n.block || "Sharing-list", this.elementClassName = n.elements || "Sharing-item", this.counterClassName = n.counters || "Sharing-counter", this.linkClassName = n.links || "Sharing-icon"
+            }
+            return v(t, [
+            {
+                key: "createListElement",
+                value: function()
+                {
+                    return this.listElement = document.createElement("ul"), this.listElement.className = this.blockClassName, this.listElement
+                }
+            },
+            {
+                key: "createItemElement",
+                value: function(t)
+                {
+                    var e = document.createElement("li");
+                    e.className = "".concat(this.elementClassName), e.setAttribute("data-name", t);
+                    var n = document.createElement("span");
+                    return n.className = "".concat(this.linkClassName, " ").concat(this.linkClassName, "_").concat(t), e.insertBefore(n, null), e
+                }
+            },
+            {
+                key: "createCounterElement",
+                value: function()
+                {
+                    var t = document.createElement("span");
+                    return t.className = "".concat(this.counterClassName), t
+                }
+            },
+            {
+                key: "addToList",
+                value: function(t)
+                {
+                    this.listElement.insertBefore(t, null)
+                }
+            }]), t
+        }(),
+        b = n(2),
+        w = n(3),
+        E = function()
+        {
+            function t()
+            {
+                Object(b.a)(this, t)
+            }
+            return Object(w.a)(t, null, [
+            {
+                key: "getCounters",
+                value: function(t)
+                {
+                    return new Promise(function(e, n)
+                    {
+                        fetch("https://socialstat.rt.com/socialstat?url=".concat(t),
+                        {
+                            method: "GET"
+                        }).then(function(t)
+                        {
+                            return t.json(t)
+                        }).then(function(t)
+                        {
+                            return e(t)
+                        }).catch(function(t)
+                        {
+                            return n(t)
+                        })
+                    })
+                }
+            }]), t
+        }();
+    E._queue = [], E._status = "", E._data = {};
+    var S = function()
+    {
+        function t(e)
+        {
+            var n = this;
+            Object(b.a)(this, t), this.element = e, this.onClick(function()
+            {
+                return n.show()
+            }), this._serverService = E
+        }
+        return Object(w.a)(t, [
+        {
+            key: "showPopup",
+            value: function(t)
+            {
+                var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] :
+                    {},
+                    n = e.width || 650,
+                    r = "toolbar=0, \n                            status=0, \n                            width=".concat(n, ", \n                            height=").concat(e.height || 450, ",\n                            top=").concat(e.top || 200, ",\n                            left=").concat(window.innerWidth / 2 - n / 2);
+                window.open(t, "", r)
+            }
+        },
+        {
+            key: "onClick",
+            value: function(t)
+            {
+                this.element.addEventListener("click", t)
+            }
+        },
+        {
+            key: "getShareCount",
+            value: function(t)
+            {
+                return this._serverService.getCounters(t)
+            }
+        }]), t
+    }();
+
+    function k(t, e)
+    {
+        var n, r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+        if("string" === typeof e)
+        {
+            n = e.split(/]|\[|\./).filter(function(t)
+            {
+                return "" !== t
+            })
+        }
+        else n = e;
+        if(Array.isArray(t))
+        {
+            var o = parseInt(n[r], 10),
+                i = !isNaN(o) && "undefined" !== typeof t[o];
+            return i && n[r + 1] ? k(t[n[r]], e, r + 1) : i
+        }
+        return t.hasOwnProperty(n[r]) && n[r + 1] ? k(t[n[r]], e, r + 1) : t.hasOwnProperty(n[r])
+    }
+    var C = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o.config = {
+                    shareUrl: "https://www.facebook.com/sharer.php?",
+                    serviceUrl: "https://socialstat.rt.com/socialstat?"
+                }, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl(),
+                        e = "toolbar=0, \n                            status=0, \n                            width=".concat(650, ", \n                            height=450,\n                            top=200,\n                            left=").concat(window.innerWidth / 2 - 325);
+                    window.open(t, "", e)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = this.params.href || window.location.href,
+                        e = this.params.text || document.title;
+                    return "".concat(this.config.shareUrl, "src=sp&u=").concat(encodeURIComponent(t), "&title=").concat(encodeURIComponent(e))
+                }
+            },
+            {
+                key: "addCounterElement",
+                value: function(t)
+                {
+                    var e = this;
+                    this.getShareCount(this.params.href || window.location.href).then(function(n)
+                    {
+                        if(k(n, "res.data.fb"))
+                        {
+                            if(!parseInt(n.data.fb)) return;
+                            e.counterElement = t.createCounterElement(), e.element.insertBefore(e.counterElement, null), e.counterElement.innerHTML = n.data.fb
+                        }
+                    }).catch(function(t)
+                    {
+                        console.log("err", t)
+                    })
+                }
+            }]), e
+        }(),
+        D = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl(),
+                        e = "toolbar=0, \n                            status=0, \n                            width=".concat(650, ", \n                            height=450,\n                            top=200,\n                            left=").concat(window.innerWidth / 2 - 325);
+                    window.open(t, "", e)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = window.location.href,
+                        e = this.params.title || document.title;
+                    return "".concat("https://plus.google.com/share?", "t=").concat(encodeURIComponent(e), "&url=").concat(encodeURIComponent(t))
+                }
+            }]), e
+        }(),
+        O = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o.config = {
+                    shareUrl: "https://www.reddit.com/submit?",
+                    serviceUrl: "https://socialstat.rt.com/socialstat?"
+                }, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl();
+                    window.open(t)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = window.location.href,
+                        e = this.params.title || document.title;
+                    return "".concat(this.config.shareUrl, "title=").concat(encodeURIComponent(e), "&url=").concat(encodeURIComponent(t))
+                }
+            },
+            {
+                key: "addCounterElement",
+                value: function(t)
+                {
+                    var e = this;
+                    this.getShareCount().then(function(n)
+                    {
+                        if(k(n, "res.data.reddit"))
+                        {
+                            if(!parseInt(n.data.reddit)) return;
+                            e.counterElement = t.createCounterElement(), e.element.insertBefore(e.counterElement, null), e.counterElement.innerHTML = n.data.reddit
+                        }
+                    }).catch(function(t)
+                    {
+                        console.log("err", t)
+                    })
+                }
+            }]), e
+        }(),
+        P = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl(),
+                        e = "toolbar=0, \n                            status=0, \n                            width=".concat(650, ", \n                            height=450,\n                            top=200,\n                            left=").concat(window.innerWidth / 2 - 325);
+                    window.open(t, "", e)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = this.params.href || window.location.href,
+                        e = this.params.text || document.title,
+                        n = this.params.hashtags || "";
+                    return "".concat("https://twitter.com/intent/tweet?", "text=").concat(encodeURIComponent(e), "&url=").concat(encodeURIComponent(t), "&hashtags=").concat(encodeURIComponent(n))
+                }
+            }]), e
+        }(),
+        I = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl(),
+                        e = "toolbar=0, \n                            status=0, \n                            width=".concat(650, ", \n                            height=450,\n                            top=200,\n                            left=").concat(window.innerWidth / 2 - 325);
+                    window.open(t, "", e)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = window.location.href,
+                        e = this.params.text || document.title;
+                    return "".concat("https://telegram.me/share/url?", "text=").concat(encodeURIComponent(e), "&url=").concat(encodeURIComponent(t))
+                }
+            }]), e
+        }(),
+        _ = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl();
+                    window.open(t)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = this.params.href || window.location.href,
+                        e = this.params.text || document.title,
+                        n = "".concat(e, " ").concat(t);
+                    return "".concat("https://api.whatsapp.com/send?", "text=").concat(encodeURIComponent(n))
+                }
+            }]), e
+        }(),
+        L = n(5),
+        x = n(4),
+        T = n(6),
+        j = function(t)
+        {
+            function e(t, n)
+            {
+                var r;
+                return Object(b.a)(this, e), (r = Object(L.a)(this, Object(x.a)(e).call(this, t))).params = n, r
+            }
+            return Object(T.a)(e, t), Object(w.a)(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl();
+                    window.open(t)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = "",
+                        e = window.location.href;
+                    if(this.checkIsMobile())
+                    {
+                        t = "".concat("fb-messenger://share?", "link=").concat(e, "&app_id=").concat(0xf7d36ad91697)
+                    }
+                    else
+                    {
+                        t = "".concat("https://www.facebook.com/dialog/send?", "link=").concat(encodeURIComponent(e), "&app_id=").concat(0xf7d36ad91697, "&redirect_uri=").concat(encodeURIComponent(e))
+                    }
+                    return t
+                }
+            },
+            {
+                key: "checkIsMobile",
+                value: function()
+                {
+                    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+                }
+            }]), e
+        }(S),
+        N = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl(),
+                        e = "toolbar=0, \n                            status=0, \n                            width=".concat(650, ", \n                            height=450,\n                            top=200,\n                            left=").concat(window.innerWidth / 2 - 325);
+                    window.open(t, "", e)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = window.location.href,
+                        e = this.params.text || document.title;
+                    return "".concat("https://vk.com/share.php?", "title=").concat(encodeURIComponent(e), "&url=").concat(encodeURIComponent(t))
+                }
+            },
+            {
+                key: "addCounterElement",
+                value: function(t)
+                {
+                    var e = this;
+                    this.getShareCount().then(function(n)
+                    {
+                        if(k(n, "res.data.vk"))
+                        {
+                            if(!parseInt(n.data.vk)) return;
+                            e.counterElement = t.createCounterElement(), e.element.insertBefore(e.counterElement, null), e.counterElement.innerHTML = n.data.vk
+                        }
+                    }).catch(function(t)
+                    {
+                        console.log("err", t)
+                    })
+                }
+            }]), e
+        }(),
+        H = function(t)
+        {
+            function e(t, n)
+            {
+                var o;
+                return Object(r.a)(this, e), (o = u(this, h(e).call(this, t))).params = n, o
+            }
+            return f(e, S), v(e, [
+            {
+                key: "show",
+                value: function()
+                {
+                    var t = this._getUrl(),
+                        e = "toolbar=0,\n                            status=0,\n                            width=".concat(650, ",\n                            height=450,\n                            top=200,\n                            left=").concat(window.innerWidth / 2 - 325);
+                    window.open(t, "", e)
+                }
+            },
+            {
+                key: "_getUrl",
+                value: function()
+                {
+                    var t = window.location.href,
+                        e = this.params.text || document.title;
+                    return "".concat("https://connect.ok.ru/offer?", "title=").concat(encodeURIComponent(e), "&url=").concat(encodeURIComponent(t))
+                }
+            },
+            {
+                key: "addCounterElement",
+                value: function(t)
+                {
+                    var e = this;
+                    this.getShareCount().then(function(n)
+                    {
+                        if(k(n, "res.data.ok"))
+                        {
+                            if(!parseInt(n.data.ok)) return;
+                            e.counterElement = t.createCounterElement(), e.element.insertBefore(e.counterElement, null), e.counterElement.innerHTML = n.data.ok
+                        }
+                    }).catch(function(t)
+                    {
+                        console.log("err", t)
+                    })
+                }
+            }]), e
+        }(),
+        F = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    n.getDataAttr(t)
+                }, n.getDataAttr = function(t)
+                {
+                    var e = t.getAttribute("data-buttons");
+                    if(e)
+                    {
+                        var r = {};
+                        r.counters = "undefined" !== typeof t.getAttribute("data-counters"), r.networks = {}, e.split(",").forEach(function(e)
+                        {
+                            r.networks[e.trim()] = {
+                                href: t.getAttribute("data-href"),
+                                text: t.getAttribute("title")
+                            }
+                        }), n.createShare(t, r)
+                    }
+                }, n.createShare = function(t, e)
+                {
+                    n.root = t, n.options = e;
+                    var r = n.options,
+                        o = r.classNames,
+                        i = r.networks;
+                    n.htmlConstructor = new y(o);
+                    var a = n.createElementsList(i);
+                    n.root.insertBefore(a, null)
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.create("Sharing", function(t)
+                {
+                    0 !== t.length && t.forEach(function(t)
+                    {
+                        n.init(t)
+                    })
+                }), n
+            }
+            return f(e, m), v(e, [
+            {
+                key: "initNetwork",
+                value: function(t, e, n)
+                {
+                    switch(e)
+                    {
+                        case "facebook":
+                            var r = new C(t, n);
+                            return this.options.counters && r.addCounterElement(this.htmlConstructor), r;
+                        case "google":
+                            return new D(t, n);
+                        case "reddit":
+                            var o = new O(t, n);
+                            return this.options.counters && o.addCounterElement(this.htmlConstructor), o;
+                        case "twitter":
+                            return new P(t, n);
+                        case "telegram":
+                            return new I(t, n);
+                        case "whatsapp":
+                            return new _(t, n);
+                        case "fbmessenger":
+                            return new j(t, n);
+                        case "vkontakte":
+                            var i = new N(t, n);
+                            return this.options.counters && i.addCounterElement(this.htmlConstructor), i;
+                        case "ok":
+                            var a = new H(t, n);
+                            return this.options.counters && a.addCounterElement(this.htmlConstructor), a;
+                        default:
+                            return null
+                    }
+                }
+            },
+            {
+                key: "createElementsList",
+                value: function(t)
+                {
+                    var e = this,
+                        n = this.htmlConstructor.createListElement();
+                    return Object.keys(t).forEach(function(t)
+                    {
+                        var n = e.htmlConstructor.createItemElement(t);
+                        e.htmlConstructor.addToList(n), e.initNetwork(n, t, e.options.networks[t])
+                    }), n
+                }
+            }]), e
+        }(),
+        A = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    n.root = t;
+                    var e = l(l(n));
+                    n.root.querySelector(".Bookmark__path").addEventListener("click", function()
+                    {
+                        var t = {
+                            id: this.getAttribute("data-publicId"),
+                            href: this.getAttribute("data-href"),
+                            title: this.getAttribute("data-title"),
+                            date: this.getAttribute("data-date"),
+                            cover: this.getAttribute("data-cover")
+                        };
+                        e.addItemToStore(t, this)
+                    });
+                    var r = n.root.querySelector(".Bookmark__path").getAttribute("data-publicId");
+                    n.elements[r] = n.elements[r] || [], n.elements[r].push(n.root.querySelector(".Bookmark__path"))
+                }, n.getItemLocalStorage = function()
+                {
+                    var t = [];
+                    try
+                    {
+                        t = JSON.parse(window.localStorage.getItem("saveNewsIds") || "[]")
+                    }
+                    catch (o)
+                    {
+                        console.error("error parse items: ", o)
+                    }
+                    t.forEach(function(t, e)
+                    {
+                        n.elements[t.id] && n.elements[t.id].forEach(function(t)
+                        {
+                            t.classList.add("Bookmark__active")
+                        })
+                    });
+                    var e = document.querySelector("#Counter-news"),
+                        r = t.length;
+                    e.innerHTML = 0 == r ? "" : '<div class="Counter__number">'.concat(r, "</div>")
+                }, n.getItemLocalStorage2 = function()
+                {
+                    var t = [];
+                    try
+                    {
+                        t = JSON.parse(window.localStorage.getItem("saveNewsIds") || "[]")
+                    }
+                    catch (r)
+                    {
+                        console.error("error parse items: ", r)
+                    }
+                    var e = document.querySelector("#Counter-news"),
+                        n = t.length;
+                    e.innerHTML = 0 == n ? "" : '<div class="Counter__number">'.concat(n, "</div>")
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.elements = {}, n.create("Bookmark", function(t)
+                {
+                    0 !== t.length && (t.forEach(function(t)
+                    {
+                        n.init(t)
+                    }), n.getItemLocalStorage())
+                }), "/savednews/" != window.location.pathname && "/savednews" != window.location.pathname && n.getItemLocalStorage2(), n
+            }
+            return f(e, m), v(e, [
+            {
+                key: "itemInStore",
+                value: function(t)
+                {
+                    var e = [];
+                    try
+                    {
+                        e = JSON.parse(window.localStorage.getItem("saveNewsIds") || "[]")
+                    }
+                    catch (n)
+                    {
+                        console.error("error parse items: ", n)
+                    }
+                    return e.filter(function(e)
+                    {
+                        return e.id === t
+                    }).length > 0
+                }
+            },
+            {
+                key: "getItems",
+                value: function()
+                {
+                    var t = [];
+                    try
+                    {
+                        t = JSON.parse(window.localStorage.getItem("saveNewsIds") || "[]")
+                    }
+                    catch (e)
+                    {
+                        console.error("error parse items: ", e)
+                    }
+                    return t
+                }
+            },
+            {
+                key: "addItemToStore",
+                value: function(t, e)
+                {
+                    var n = this,
+                        r = [];
+                    try
+                    {
+                        r = JSON.parse(window.localStorage.getItem("saveNewsIds") || "[]")
+                    }
+                    catch (i)
+                    {
+                        console.error("error parse items: ", i)
+                    }
+                    var o = !1;
+                    r.filter(function(e, n)
+                    {
+                        return e.id === t.id && (o = n, !0)
+                    });
+                    r.forEach(function(t, e)
+                    {
+                        n.elements[t.id] && n.elements[t.id].forEach(function(t)
+                        {
+                            t.classList.remove("Bookmark__active")
+                        })
+                    }), !1 !== o ? r.splice(o, 1) : r.push(t), window.localStorage.setItem("saveNewsIds", JSON.stringify(r)), this.getItemLocalStorage(e)
+                }
+            }]), e
+        }(),
+        M = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    var e = l(l(n));
+                    n.root = t, n.buttonRoot = n.root.querySelector(".Listing-button"), n.btn = n.buttonRoot.querySelector("button"), n.btn.addEventListener("click", function()
+                    {
+                        e.url = this.getAttribute("data-href"), e.success && (e.fetch("".concat(e.url)), e.success = !1, e.buttonRoot.remove())
+                    }), "auto" === n.btn.getAttribute("data-loading") && window.addEventListener("scroll", function()
+                    {
+                        var t = e.root.offsetHeight,
+                            n = window.pageYOffset + window.innerHeight + 200;
+                        e.url = e.btn.getAttribute("data-href"), n >= t && e.success && (e.fetch("".concat(e.url)), e.success = !1)
+                    })
+                }, n.initComments = function()
+                {
+                    new p
+                }, n.initSharing = function()
+                {
+                    new F
+                }, n.initBookmark = function()
+                {
+                    new A
+                }, n.fetch = function(t)
+                {
+                    var e = l(l(n));
+                    fetch(t).then(function(t)
+                    {
+                        return t.text()
+                    }).then(function(t)
+                    {
+                        var n = (new DOMParser).parseFromString(t, "text/html");
+                        e.docs = n.querySelectorAll(".Listing-item"), e.nextBtn = n.querySelector(".Listing-button");
+                        for(var r = 0; r < e.docs.length; r++) e.root.insertBefore(e.docs[r], null);
+                        e.root.insertBefore(e.nextBtn, null), e.count = e.count + 1, e.success = !0, e.initComments(), e.initSharing(), e.initBookmark(), "auto" !== e.nextBtn.querySelector("button").getAttribute("data-loading") && e.nextBtn.querySelector("button").addEventListener("click", function()
+                        {
+                            e.url = this.getAttribute("data-href"), e.success && (e.fetch("".concat(e.url)), e.success = !1, e.nextBtn.remove())
+                        })
+                    }).catch(function(t)
+                    {
+                        console.error(t), e.success = !0
+                    })
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.count = 1, n.success = !0, n.create("Listing", function(t)
+                {
+                    0 !== t.length && t.forEach(function(t)
+                    {
+                        n.init(t)
+                    })
+                }), n
+            }
+            return f(e, m), e
+        }(),
+        U = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    n.root = t;
+                    var e = l(l(n));
+                    n.root.querySelector('.Header-item[type="button"]').addEventListener("click", function()
+                    {
+                        e.root.classList.toggle("Header-isNavOpened"), "true" === document.body.getAttribute("data-nav") ? document.body.setAttribute("data-nav", "false") : document.body.setAttribute("data-nav", "true")
+                    })
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.create("Header", function(t)
+                {
+                    0 !== t.length && t.forEach(function(t)
+                    {
+                        n.init(t)
+                    })
+                }), n
+            }
+            return f(e, m), e
+        }(),
+        B = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    var e = l(l(n));
+                    n.root = t, n.buttonRoot = n.root.querySelector(".PopularNews-button"), n.btn = n.buttonRoot.querySelector("button"), n.btn.addEventListener("click", function()
+                    {
+                        var t = e.root.querySelectorAll(".PopularNews-hide"),
+                            n = this.getAttribute("data-limit");
+                        t.forEach(function(e, r)
+                        {
+                            t.length > 0 && r < Number(n) && e.classList.remove("PopularNews-hide")
+                        }), t.length < Number(n) + 1 && e.buttonRoot.classList.add("PopularNews-button_hide")
+                    })
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.create("PopularNews", function(t)
+                {
+                    0 !== t.length && t.forEach(function(t)
+                    {
+                        n.init(t)
+                    })
+                }), n
+            }
+            return f(e, m), e
+        }(),
+        R = function()
+        {
+            function t()
+            {
+                Object(r.a)(this, t), this.btn = document.querySelector(".js-view-shars-btn"), this.elem = document.querySelector(".js-view-shars"), this.social = document.querySelector(".js-view-shars-social"), this.icon = document.querySelector(".js-icon-btn"), this.facebookBtn = document.getElementById("share-facebook"), this.twitterBtn = document.getElementById("share-twitter"), this.whatsappBtn = document.getElementById("share-whatsapp"), this.emailBtn = document.getElementById("share-email"), null !== this.elem && this.init()
+            }
+            return v(t, [
+            {
+                key: "onFacebook",
+                value: function()
+                {
+                    window.open("http://www.facebook.com/sharer/sharer.php?u=" + window.location.href + "&title=" + document.title)
+                }
+            },
+            {
+                key: "onTwitter",
+                value: function()
+                {
+                    window.open("http://www.twitter.com/share?text=" + document.title + "&url=" + window.location.href)
+                }
+            },
+            {
+                key: "onWhatsApp",
+                value: function()
+                {
+                    window.open("https://api.whatsapp.com/send?text=" + document.title + " " + window.location.href)
+                }
+            },
+            {
+                key: "onEmail",
+                value: function()
+                {
+                    window.open("mailto:?to=&body=" + document.title + " " + window.location.href)
+                }
+            },
+            {
+                key: "addEvent",
+                value: function()
+                {
+                    var t = this;
+                    this.btn.addEventListener("click", function()
+                    {
+                        setTimeout(function()
+                        {
+                            t.elem.classList.toggle("shars__visible")
+                        }, 100), setTimeout(function()
+                        {
+                            t.elem.classList.toggle("shars__open")
+                        }, 200)
+                    }), this.facebookBtn.addEventListener("click", this.onFacebook), this.twitterBtn.addEventListener("click", this.onTwitter), this.whatsappBtn.addEventListener("click", this.onWhatsApp), this.emailBtn.addEventListener("click", this.onEmail)
+                }
+            },
+            {
+                key: "init",
+                value: function()
+                {
+                    this.addEvent()
+                }
+            }]), t
+        }(),
+        q = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).setViews = function()
+                {
+                    window.CounterEye.writeView && fetch(window.CounterEye.writeView.url,
+                    {
+                        method: "POST",
+                        body: "doc=" + window.CounterEye.writeView.publicId
+                    })
+                }, n.addEvent = function(t)
+                {
+                    n.root = t;
+                    l(l(n));
+                    n.data = n.root.onload(), n.elements[n.data.publicId] = t, n.createCounterEye(n.data.publicId)
+                }, n.createCounterEye = function(t)
+                {
+                    window.CounterEye.getDataUrl && (n.countersEyes || (n.countersEyes = []), n.countersEyes.push(t))
+                }, n.getWatchesStats = function()
+                {
+                    var t = l(l(n));
+                    fetch(window.CounterEye.getDataUrl + "/" + n.countersEyes.join("-") + "/total",
+                    {}).then(function(t)
+                    {
+                        return t.json()
+                    }).then(function(e)
+                    {
+                        t.addStats(e.stats), t.countersEyes = [], t.elements = {}
+                    }).catch(function(t)
+                    {
+                        console.error(t)
+                    })
+                }, n.addStats = function(t)
+                {
+                    Object.keys(t).forEach(function(e)
+                    {
+                        void 0 !== n.elements[e] && (n.elements[e].classList.add("Watches-active"), n.elements[e].innerHTML += t[e])
+                    })
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.elements = {}, n.create("Watches", function(t)
+                {
+                    0 !== t.length && (t.forEach(function(t)
+                    {
+                        n.init(t)
+                    }), n.getWatchesStats())
+                }), n.setViews(), n
+            }
+            return f(e, m), e
+        }(),
+        X = function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    l(l(n));
+                    n.root = t, document.cookie.indexOf("rt-cb-approve") < 0 && n.showCookiesBanner(), n.root.querySelector(".cookies__banner-button").addEventListener("click", function()
+                    {
+                        n.hideCookiesBanner()
+                    })
+                }, n.showCookiesBanner = function()
+                {
+                    n.root.classList.add("cookies-banner-shown")
+                }, n.hideCookiesBanner = function()
+                {
+                    n.root.classList.remove("cookies-banner-shown"), n.setCookie()
+                }, n.setCookie = function()
+                {
+                    var t = new Date((new Date).getTime() + 31536e6);
+                    document.cookie = "rt-cb-approve=true; path=/; expires=" + t.toUTCString()
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.create("Cookies", function(t)
+                {
+                    0 !== t.length && t.forEach(function(t)
+                    {
+                        n.init(t)
+                    })
+                }), n
+            }
+            return f(e, m), e
+        }(),
+        W = n(9),
+        Y = n.n(W),
+        V = (n(11), function(t)
+        {
+            function e(t)
+            {
+                var n;
+                return Object(r.a)(this, e), (n = u(this, h(e).call(this, t))).addEvent = function(t)
+                {
+                    Y()(t,
+                    {
+                        lang:
+                        {
+                            days: ["\u0627\u0644\u0623\u062d\u062f", "\u0627\u0644\u0625\u062b\u0646\u064a\u0646", "\u0627\u0644\u062b\u0644\u0627\u062b\u0627\u0621", "\u0627\u0644\u0623\u0631\u0628\u0639\u0627\u0621", "\u0627\u0644\u062e\u0645\u064a\u0633", "\u0627\u0644\u062c\u0645\u0639\u0629", "\u0627\u0644\u0633\u0628\u062a"],
+                            months: ["\u0643\u0627\u0646\u0648\u0646 \u0627\u0644\u062b\u0627\u0646\u064a", "\u0634\u0647\u0631 \u0641\u0628\u0631\u0627\u064a\u0631", "\u0645\u0627\u0631\u0633", "\u0623\u0628\u0631\u064a\u0644", "\u0642\u062f", "\u064a\u0648\u0646\u064a\u0648", "\u064a\u0648\u0644\u064a\u0648", "\u0623\u063a\u0633\u0637\u0633", "\u0633\u0628\u062a\u0645\u0628\u0631", "\u0634\u0647\u0631 \u0627\u0643\u062a\u0648\u0628\u0631", "\u0634\u0647\u0631 \u0646\u0648\u0641\u0645\u0628\u0631", "\u062f\u064a\u0633\u0645\u0628\u0631"],
+                            today: "\u0627\u0644\u064a\u0648\u0645",
+                            clear: "\u0648\u0627\u0636\u062d",
+                            close: "\u0623\u063a\u0644\u0642"
+                        }
+                    })
+                }, n.init = function(t)
+                {
+                    n.addEvent(t)
+                }, n.root = null, n.elements = {}, n.create("Datepicker", function(t)
+                {
+                    0 !== t.length && t.forEach(function(t)
+                    {
+                        n.init(t)
+                    })
+                }), n
+            }
+            return f(e, m), e
+        }());
+    n(12);
+    window.addEventListener("load", function()
+    {
+        new a, new M, new B, new U, new R, new p, new q, new F, new A, new X, new V
+    })
+}]);
